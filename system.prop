@@ -7,14 +7,14 @@ persist.audio.fluence.speaker=false
 tunnel.audio.encode=false
 media.aac_51_output_enabled=true
 audio.offload.buffer.size.kb=32
-audio.offload.video=true
-audio.offload.pcm.16bit.enable=true
-audio.offload.pcm.24bit.enable=true
+audio.offload.video=false
+audio.offload.pcm.16bit.enable=false
+audio.offload.pcm.24bit.enable=false
 audio.offload.track.enable=false
 audio.deep_buffer.media=true
 use.voice.path.for.pcm.voip=true
-audio.offload.multiaac.enable=true
-audio.offload.gapless.enabled=true
+audio.offload.multiaac.enable=false
+audio.offload.gapless.enabled=false
 audio.safx.pbe.enabled=true
 audio.parser.ip.buffer.size=262144
 audio.dolby.ds2.enabled=true
@@ -38,7 +38,7 @@ persist.camera.stats.test=5
 camera.hal1.packagelist=com.skype.raider,com.whatsapp,com.tencent.mm,com.google.android.GoogleCamera
 
 # HAX - remove ASAP
-media.stagefright.legacyencoder=true
+media.stagefright.legacyencoder=false
 media.stagefright.less-secure=true
 
 # CNE
@@ -47,7 +47,6 @@ persist.cne.feature=1
 # Data modules
 ro.use_data_netmgrd=true
 persist.data.netmgrd.qos.enable=true
-persist.data.mode=concurrent
 
 # Fingerprint
 persist.qfp=false
@@ -76,7 +75,7 @@ mmp.enable.3g2=true
 mm.enable.sec.smoothstreaming=true
 av.debug.disable.pers.cache=true
 mm.enable.qcom_parser=1048575
-persist.mm.enable.prefetch=true
+persist.mm.enable.prefetch=false
 vidc.enc.dcvs.extra-buff-count=2
 vidc.debug.perf.mode=2
 
@@ -85,15 +84,6 @@ ro.nfc.port=I2C
 
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
-ro.sys.fw.bg_apps_limit=60
-
-# Power logs
-persist.power.logs.switch=0
-persist.power.logs.limit.time=72
-persist.power.logs.off.time=240
-persist.power.logs.off.level=8
-persist.power.logs.on.time=20
-persist.power.logs.on.level=10
 
 # RIL
 rild.libpath=/vendor/lib64/libril-qc-qmi-1.so
@@ -114,17 +104,16 @@ persist.net.doxlat=true
 persist.radio.multisim.config=dsds
 persist.radio.apm_sim_not_pwdn=1
 persist.radio.sib16_support=1
-persist.radio.force_on_dc=true
+persist.radio.force_on_dc=false
 persist.radio.rat_on=combine
 persist.radio.custom_ecc=1
-persist.radio.NO_STAPA=1
+persist.radio.NO_STAPA=0
 persist.radio.VT_HYBRID_ENABLE=1
-persist.radio.poweron_opt=1
+persist.radio.poweron_opt=0
 ro.telephony.ril.config=simactivation
-ro.telephony.default_network=22,22
-ro.telephony.default_cdma_sub=0
+ro.telephony.default_network=4
 ro.telephony.call_ring.multiple=false
-telephony.lteOnCdmaDevice=1,1
+telephony.lteOnCdmaDevice=0
 
 # RmNet Data
 persist.rmnet.data.enable=true
