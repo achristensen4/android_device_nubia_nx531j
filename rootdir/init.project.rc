@@ -260,10 +260,9 @@ on property:persist.sys.image.cabc=h
 # nubia add start
 # goodix fingerprint service
 service gx_fpd /system/bin/gx_fpd
-    class late_start
+    class main
     user system
     group system
-    disabled
 
 on property:sys.hardware.fingerprint=goodix
     start gx_fpd
