@@ -1,6 +1,6 @@
 on boot
     # Enable sched boost
-    write /proc/sys/kernel/sched_boost 1
+    write /proc/sys/kernel/sched_boost 0
 
 on charger
     wait /dev/block/bootdevice/by-name/system
